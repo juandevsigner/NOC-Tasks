@@ -10,13 +10,13 @@ const fileSystemLogRespository = new LogRespositoryImpl(
 export class ServerApp {
   public static start() {
     console.log("---------- SERVER START -------------");
-    CronService.createJob("*/5 * * * * *", () => {
-      const url = "https:localhost:3000";
-      new CheckService(
-        fileSystemLogRespository,
-        () => console.log("SUCCESS ->", url),
-        (error) => console.log(`${error.toUpperCase()}-> ${url}`)
-      ).execute(url);
-    });
+    // CronService.createJob("*/5 * * * * *", () => {
+    //   const url = "https:localhost:3000";
+    //   new CheckService(
+    //     fileSystemLogRespository,
+    //     () => console.log("SUCCESS ->", url),
+    //     (error) => console.log(`${error.toUpperCase()}-> ${url}`)
+    //   ).execute(url);
+    // });
   }
 }
